@@ -2,6 +2,9 @@ import torch.nn as nn
 
 
 class DenseAutoencoder(nn.Module):
+    """
+    Class that creates embedding for movies, it accepts the converted movie title and genres vector
+    """
     def __init__(self, input_size, emb_size=32):
         super().__init__()
 
@@ -17,7 +20,7 @@ class DenseAutoencoder(nn.Module):
             nn.BatchNorm1d(256),
             nn.ReLU(),
             nn.Linear(256, input_size),
-            nn.Sigmoid()
+            nn.ReLU()
         )
 
     def forward(self, x):
