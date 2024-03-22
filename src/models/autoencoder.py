@@ -7,6 +7,8 @@ class DenseAutoencoder(nn.Module):
     """
     def __init__(self, input_size, emb_size=32):
         super().__init__()
+        
+        
 
         self.encoder = nn.Sequential(
             nn.Linear(input_size, 256),

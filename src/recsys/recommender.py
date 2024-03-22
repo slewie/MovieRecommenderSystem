@@ -4,6 +4,8 @@ import numpy as np
 import random
 
 
+
+
 class Recommender:
     """
    Recommendation system for movies recommendations.
